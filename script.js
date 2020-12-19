@@ -1,21 +1,14 @@
 function validate()
 {
-  var Subject = document.getElementById("Subject");
-  var Email = document.getElementById("email");
-  var ID = document.getElementById("ID");
-  var URL = document.getElementById("URL");
-  var Massage = document.getElementById("massage");
-
-  if(Subject.value=="" || Email.value =="" || ID.value=="" || URL.value=="" || Massage.value==""){
-    sweetAlert("Oops...", "showing exactly which fields are empty.", "error"); 
-    return false;
-  }
  
-  else {
-    
-return true;
-  }
-  
+  var Subject = document.getElementById("Subject").value;
+  var ID = document.getElementById("ID").value;
+  var Email = document.getElementById("Email").value;
+  var URL = document.getElementById("URL").value;
+  var Massage = document.getElementById("Massage").value;
+
+  if(Subject.length == 0 || ID.length == 0 || Email.length == 0 || URL.length == 0 || Massage.length == 0)
+  sweetAlert("Oops...", "showing exactly which fields are empty.", "error"); 
 }
 function onlyalphabate()
 { 
