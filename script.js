@@ -6,13 +6,13 @@ function validate()
   var URL = document.getElementById("URL");
   var Massage = document.getElementById("massage");
 
-  if(Subject.value.trim()=="" || Email.value.trim() =="" || ID.value.trim()=="" || URL.value.trim()=="" || Massage.value.trim()==""){
+  if(Subject.value=="" || Email.value =="" || ID.value=="" || URL.value=="" || Massage.value==""){
     sweetAlert("Oops...", "showing exactly which fields are empty.", "error"); 
     return false;
   }
  
   else {
-    sendEmail();
+    
 return true;
   }
   
@@ -44,8 +44,10 @@ function onlyalphabate()
    
    function onlynumber()
    { 
+    
      var regexp = /^[0-9]*$/; 
-     if(ID.value.match(regexp))
+  
+      if(ID.value.match(regexp))
       { 
        return true; }
       else{ 
@@ -54,12 +56,13 @@ function onlyalphabate()
           return false; }
       }
       
-    /*function mail1()
+    
+    function mail11()
       {
         var emailvalid = /^\w+[\+\.\w-]*@([\w-]+\.)*\w+[\w-]*\.([a-z]{2,4}|\d+)$/i ;
          if(Email.value.match(emailvalid)) 
          { 
-  
+          mail();
            return true;
            }
            else{ 
@@ -67,11 +70,12 @@ function onlyalphabate()
              alert("the email is miss @ ... or another problem");
             
                return false; }
+               
              
             
 
       }
-      */
+      
      function mail()
      {
         
@@ -89,6 +93,7 @@ function onlyalphabate()
       }
       alert(y);
        }
+       
        if(URL != ""){
       var z = URL;
       var end = URL.indexOf(".");
@@ -104,11 +109,11 @@ function onlyalphabate()
      }
    function myfunction()
    {
-     mail();
    onlyalphabate();
    onlynumber();
    onlymessage();
-   
+   mail11();
+
    validate();
    
    
